@@ -25,7 +25,7 @@ export async function saveToSheets(lead) {
       valueInputOption: "USER_ENTERED",
       requestBody: {
         values: [[
-          lead.date,
+          new Date(lead.date).toLocaleString("uk-UA", { timeZone: "Europe/Kyiv" }),
           lead.username || "",
           lead.name || "",
           lead.type || "",
