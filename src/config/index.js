@@ -6,7 +6,9 @@ export const config = {
   teamChatId: process.env.TEAM_CHAT_ID || null,
   siteUrl: process.env.SITE_URL || "https://zarvanska.agency",
   google: {
-    credentials: process.env.GOOGLE_CREDENTIALS || null,
+    credentials: process.env.GOOGLE_CREDENTIALS
+      ? JSON.parse(process.env.GOOGLE_CREDENTIALS)
+      : null,
     sheetId: process.env.GOOGLE_SHEET_ID || null,
   },
 };

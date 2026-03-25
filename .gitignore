@@ -1,2 +1,4 @@
 node_modules
 .env
+*.credentials.json
+next-ecommerce-386820-988a88c70120.json
